@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact </title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="secure bank.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    function validateForm() {
+        var firstName = document.getElementById('firstname').value;
+        var lastName = document.getElementById('lastname').value;
+        var email = document.getElementById('email').value;
+        var mobile = document.getElementById('mobile').value;
+
+        var isValid = true;
+
+        // First Name validation
+        if (firstName.trim() === '') {
+            document.getElementById('firstnameError').innerHTML = 'Please enter your first name';
+            isValid = false;
+        } else {
+            document.getElementById('firstnameError').innerHTML = '';
+        }
+
+        // Last Name validation
+        if (lastName.trim() === '') {
+            document.getElementById('lastnameError').innerHTML = 'Please enter your last name';
+            isValid = false;
+        } else {
+            document.getElementById('lastnameError').innerHTML = '';
+        }
+
+        // Email validation
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email.match(emailPattern)) {
+            document.getElementById('emailError').innerHTML = 'Please enter a valid email address';
+            isValid = false;
+        } else {
+            document.getElementById('emailError').innerHTML = '';
+        }
+
+        // Mobile validation
+        var mobilePattern = /^\d{10}$/;
+        if (!mobile.match(mobilePattern)) {
+            document.getElementById('mobileError').innerHTML = 'Please enter a valid 10-digit mobile number';
+            isValid = false;
+        } else {
+            document.getElementById('mobileError').innerHTML = '';
+        }
+
+        return isValid;
+    }
+</script>
+<style>
+  /* Basic styling for form container */
+  .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+  }
+  /* Styling for bank logo */
+  .logo {
+      flex: 1;
+      text-align: center;
+  }
+  .logo img {
+      max-width: 200px;
+      height: auto;
+  }
+  /* Styling for form */
+  form {
+      flex: 1;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+  label {
+      display: block;
+      margin-bottom: 10px;
+  }
+  input[type="text"],
+  input[type="email"],
+  select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+  }
+  input[type="submit"] {
+    background:linear-gradient(35deg, #030303 13.34%, #484848 93.35%);;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+  }
+  input[type="submit"]:hover {
+      background-color: #0056b3;
+  }
+  .error {
+      color: red;
+      font-size: 0.8em;
+      margin-top: -10px;
+      margin-bottom: 10px;
+  }
+</style>
+
+
+</head>
+<body> 
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-end" id="navigation">
+        <div class="container-fluid">
+          <a class="navbar-brand " id="logo" href="#"><img src="bank logo.png " alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+             
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                  Our Products
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" >
+                  <li><a class="dropdown-item" href="savingsacc.html">Savings Account</a></li>
+                  <li><a class="dropdown-item" href="creditcard.html">Credit card</a></li>
+                  <li><a class="dropdown-item" href="mutualfund.html">Mutual Funds</a></li>
+                  <li><a class="dropdown-item" href="fixeddeposit.html">Fixed Deposit</a></li>
+                  <li><a class="dropdown-item" href="personallaon.html">Personal Loan</a></li>
+                  <li><a class="dropdown-item" href="terminsurance.html">Term Insurance</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="contact.html">knowmore</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About Us
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="our bank.html">Our Bank</a></li>
+                 
+                  <li><a class="dropdown-item" href="history.html">Our History</a></li>
+                  <li><a class="dropdown-item" href="boarddirector.html">Board of Directors</a></li>
+                
+                  
+                </ul>
+              </li>
+           
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  INTERNET BANKING
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="login.html">Login</a></li>
+                  <li><a class="dropdown-item" href="newuser.html">New User? Register</a></li>
+                 
+               
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="contact.html">Contact us</a>
+              </li>
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+      <!----------------------- Main Container -------------------------->
+      <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+        <!----------------------- Login Container -------------------------->
+           <div class="row border rounded-5 p-3 bg-white shadow box-area">
+        <!--------------------------- Left Box ----------------------------->
+           <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background:transparent;">
+               <div class="featured-image mb-3">
+                <img src="bank logo.png" class="img-fluid" style="width: 400px;height: 400px;">
+               </div>
+               <p class="text-black fs-2" style= "font-weight:600;">BE VIGILANT</p>
+               <p class="text-black text-wrap text-center fs-2" style="font-weight: 600;" >BE SAFE.</p>
+           </div> 
+        <!-------------------- ------ Right Box ---------------------------->
+            
+           <div class="col-md-6 right-box">
+            <marquee behavior="scroll" direction="left">   Secure bank never asks for your Card/PIN/OTP/CVV details on phone, message or email. Please do not click on links received on your email or mobile asking your Bank/Card details.</marquee>
+              <div class="row align-items-center">
+                    <div class="header-text mb-4">
+                         <h2>Hello,Again</h2>
+                         <h2>Welcome to Contact us Page</h2>
+                         <p>Our Services are available 24/7</p>
+                    </div>
+                    <form id="contactForm" action="/submit_contact_form" method="post" onsubmit="return validateForm()">
+                      <label for="firstname">First Name:</label>
+                      <input type="text" id="firstname" name="firstname" required>
+                      <div id="firstnameError" class="error"></div>
+              
+                      <label for="lastname">Last Name:</label>
+                      <input type="text" id="lastname" name="lastname" required>
+                      <div id="lastnameError" class="error"></div>
+              
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" required>
+                      <div id="emailError" class="error"></div>
+              
+                      <label for="mobile">Mobile:</label>
+                      <input type="text" id="mobile" name="mobile" required>
+                      <div id="mobileError" class="error"></div>
+              
+                      <label for="query">Query:</label>
+                      <select id="query" name="query">
+                          <option value="general">General Inquiry</option>
+                          <option value="account">savings accounnt</option>
+                          <option value="loan">credit card</option>
+                          <option value="other">Fixed deposit</option>
+                          <option value="other">Mutual Fund</option>
+                          <option value="other">Agri Loans</option>
+                          <option value="other">Gold Loan</option>
+                      </select>
+              
+                      <input type="submit" value="Submit">
+                  </form>
+                 
+              </div>
+                  
+              </div>
+           </div> 
+          </div>
+        </div>
+    <!-- Footer -->
+<footer class="text-center text-lg-start  text-muted" id="footerbg">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <h6>Get connected with us on social networks:</h6>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container-fluid text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>SECURE BANK
+            </h6>
+            <p>
+                Secure Bank offers a wide range of banking products and financial services to corporate and retail customers through a variety of delivery channels and through its group companies.
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Savings Account</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Fixed Deposit</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Mutual Fund</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Insurance</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">INTREST RATES</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">LOYALITY REWARDS</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">FAQ</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i> MUMBAI INDIA</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              secureb@gmail.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 91 88888888888</p>
+            <p><i class="fas fa-print me-3"></i> + 91 88888888888</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: black; color: white;" >
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" style="color: white;" href="https://mdbootstrap.com/">Securebank.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+    
+</body>
+</html>

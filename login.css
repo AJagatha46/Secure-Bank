@@ -1,0 +1,89 @@
+#navigation{
+    position: sticky;
+    top:0;
+    z-index: 1;
+    
+      
+    }
+    
+    #navigation ul li a{
+    
+    color: white;
+    }
+    .flex{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .dropdown-menu{
+      background-color: black;
+      color:white;
+    }
+    .dropdown-menu :hover{
+     
+      color: black !important;
+      background-color: white !important;
+    
+    }
+
+
+
+
+    body{
+        font-family: 'Poppins', sans-serif;
+        background: #ececec;
+    }
+    /*------------ Login container ------------*/
+    .box-area{
+        width: 930px;
+    }
+    /*------------ Right box ------------*/
+    .right-box{
+        padding: 40px 30px 40px 40px;
+    }
+    /*------------ Custom Placeholder ------------*/
+    ::placeholder{
+        font-size: 16px;
+    }
+    .rounded-4{
+        border-radius: 20px;
+    }
+    .rounded-5{
+        border-radius: 30px;
+    }
+    /*------------ For small screens------------*/
+    @media only screen and (max-width: 768px){
+         .box-area{
+            margin: 0 10px;
+         }
+         .left-box{
+            height: 100px;
+            overflow: hidden;
+         }
+         .right-box{
+            padding: 20px;
+         }
+    }
+    #footerbg{
+        background-color:rgb(48, 45, 45);
+        color: white;
+      }
+      #footerbg  h6{
+        
+        color: white;
+      }
+      
+      #footerbg  p{
+        
+        color: white;
+      }
+      
+      #footerbg  a i{
+        
+        color: white;
+      }
+     .btn{
+      position: fixed;
+      z-index: -1;
+      top: 0;
+     }
